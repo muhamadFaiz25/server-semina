@@ -184,7 +184,7 @@ const deleteEvents = async (req) => {
 
     if (!result) throw new NotFoundError(`Tidak ada acara dengan id :  ${id}`);
 
-    await result.remove();
+    await result.deleteOne();
 
     return result;
 };
